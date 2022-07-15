@@ -31,10 +31,10 @@ const numberOfFilms  = +prompt('Сколько фильмов вы уже пос
         'logan': '8.1'
     }*/
 
-const lastSeenFilm       = prompt('Один из последних просмотренных фильмов?',''),
-      lastSeenFilmRate   = prompt('На сколько оцените его?',''),
-      lastSeenFilm2      = prompt('Один из последних просмотренных фильмов?'),
-      lastSeenFilmRate2  = prompt('На сколько оцените его?');
+const lastSeenFilm      = prompt('Один из последних просмотренных фильмов?',''),
+      lastSeenFilmRate  = prompt('На сколько оцените его?',''),
+      lastSeenFilm2     = prompt('Один из последних просмотренных фильмов?'),
+      lastSeenFilmRate2 = prompt('На сколько оцените его?');
 
 personalMovieDB.movies[lastSeenFilm] = lastSeenFilmRate;
 personalMovieDB.movies[lastSeenFilm2] = lastSeenFilmRate2;
@@ -43,5 +43,11 @@ personalMovieDB.movies[lastSeenFilm2] = lastSeenFilmRate2;
 
 console.log(personalMovieDB);
 
+
+if(4 == 9) {
+   console.log('OK');
+} else {
+   console.log('ERROR');
+}
 
 
