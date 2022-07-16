@@ -13,7 +13,8 @@ const personalMovieDB = {
 let lastSeenFilm,
     lastSeenFilmRate;
 
-for (let i = 1; i < 3; i++) {
+//! С ИСПОЛЬЗОВАНИЕМ ЦИКЛА FOR
+for (let i = 0; i < 2; i++) {
     lastSeenFilm = prompt('Один из последних просмотренных фильмов?', '');
     lastSeenFilmRate = prompt('На сколько оцените его?', '');
 
@@ -27,12 +28,54 @@ for (let i = 1; i < 3; i++) {
     }
 }
 
+//! С ИСПОЛЬЗОВАНИЕМ ЦИКЛА WHILE
+// let i = 0;
+// while (i < 2) {
+//     lastSeenFilm = prompt('Один из последних просмотренных фильмов?', '');
+//     lastSeenFilmRate = prompt('На сколько оцените его?', '');
+//     i++;
+
+//     if ((lastSeenFilm != '' && lastSeenFilm != null) &&
+//         (lastSeenFilmRate != '' && lastSeenFilmRate != null) &&
+//         (lastSeenFilm.length < 10)) {
+//         personalMovieDB.movies[lastSeenFilm] = lastSeenFilmRate;
+//     }
+//     else {
+//         alert("неверное значение");
+//         i--;
+//     }
+// }
+
+//! С ИСПОЛЬЗОВАНИЕМ ЦИКЛА DO WHILE
+// let i = 0;
+// do {
+//     lastSeenFilm = prompt('Один из последних просмотренных фильмов?', '');
+//     lastSeenFilmRate = prompt('На сколько оцените его?', '');
+//     i++;
+
+//     if ((lastSeenFilm != '' && lastSeenFilm != null) &&
+//         (lastSeenFilmRate != '' && lastSeenFilmRate != null) &&
+//         (lastSeenFilm.length < 10)) {
+//         personalMovieDB.movies[lastSeenFilm] = lastSeenFilmRate;
+//     }
+//     else {
+//         alert("неверное значение");
+//         i--;
+//     }    
+// } while (
+//     i < 2
+// );
+
+
+
 if (personalMovieDB.count < 10) {
     alert(`Просмотрено ${personalMovieDB.count} фильмов это довольно мало `);
-} else if (personalMovieDB.count > 30) {
+} else if (personalMovieDB.count >= 30) {
     alert(`Просмотрено ${personalMovieDB.count} фильмов это довольно много `);
-} else {
+} else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
     alert("Вы классический зритель");
+} else {
+    alert('COUNT ERROR');
 }
 
 console.log(personalMovieDB);
